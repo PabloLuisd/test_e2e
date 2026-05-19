@@ -1,0 +1,1 @@
+#Responsabilidades: adicionar produto, acessar carrinho, logout

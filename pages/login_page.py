@@ -1,0 +1,1 @@
+#Responsabilidades: abrir o site, login, capturar erro

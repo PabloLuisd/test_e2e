@@ -1,0 +1,1 @@
+#Responsabilidades: preencher dados, continuar checkout, finalizar, validar mensagens

@@ -1,0 +1,1 @@
+#Resoinsabilidades: remover produto, clicar em checkout
