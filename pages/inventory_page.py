@@ -1,1 +1,20 @@
-#Responsabilidades: adicionar produto, acessar carrinho, logout
+from selenium.webdriver.common.by import By
+
+class InventoryPage:
+
+    URL = "https://www.saucedemo.com/inventory.html"
+
+    def __init__(self, driver):
+        self.driver = driver
+
+    def add_backpack(self):
+        self.driver.find_element(
+            By.ID,
+            "add-to-cart-sauce-labs-backpack"
+        ).click()
+
+    def open_cart(self):
+        self.driver.find_element(
+            By.CLASS_NAME,
+            "shopping_cart_link"
+        ).click()
