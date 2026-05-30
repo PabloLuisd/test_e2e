@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 from pages.login_page import LoginPage
 
 def test_login_valido(driver):
