@@ -28,3 +28,9 @@ class CartPage:
                 "inventory_item_name"
             )
         ) == 0
+    
+    def start_checkout(self):
+        self.driver.find_element(
+            By.ID,
+            "checkout"
+        ).click()
