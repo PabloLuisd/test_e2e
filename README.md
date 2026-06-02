@@ -22,6 +22,13 @@ O SauceDemo é um site de exemplo de loja virtual onde é possível:
 
 ## Testes realizados
 
+* Login válido
+* Login inválido
+* Logout
+* Adicionar produto ao carrinho
+* Remover produto do carrinho
+* Checkout válido
+* Checkout inválido
 
 
 ## Tecnologias usadas
@@ -30,7 +37,6 @@ O SauceDemo é um site de exemplo de loja virtual onde é possível:
 * Selenium
 * Pytest
 
----
 
 ## Como executar
 
@@ -48,21 +54,38 @@ pip install -r requirements.txt
 
 4. Rodar os testes:
 
-pytest
+pytest -v
 
 
 ## Estrutura do projeto
 
-* tests/ → arquivos de teste
-* pages/ → classes que representam as páginas
+
+* pages/ → classes Page Object das páginas do sistema
+* tests/ → cenários de teste automatizados
+* conftest.py → fixture responsável por criar e fechar o navegador
+* requirements.txt → dependências do projeto
+* README.md → documentação do projeto
+
+
+## Dependências
+
+- selenium
+- pytest
+- webdriver-manager
+
+
+## Limitações
+
+Durante o desenvolvimento em Linux com Firefox instalado via Snap, foi necessário configurar o caminho do navegador no arquivo conftest.py para que o Selenium pudesse iniciar corretamente o Firefox.
+Dependendo do sistema operacional utilizado, essa configuração poderá precisar ser ajustada.
 
 
 ## Observações
 
 * Foi utilizado o padrão Page Object para organizar o código
-* Os testes simulam ações reais de um usuáro
-
+* Os testes simulam ações reais de um usuário
 
 ## Autor
 
-Nome: Pablo da Silva
+Nome: Pablo da Silva
+Curso: TADS - IFRS Campus Rolante
