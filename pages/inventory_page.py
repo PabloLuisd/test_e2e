@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class InventoryPage:
 
@@ -8,13 +10,15 @@ class InventoryPage:
         self.driver = driver
 
     def add_backpack(self):
-        self.driver.find_element(
-            By.ID,
-            "add-to-cart-sauce-labs-backpack"
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(
+                (By.ID, "add-to-cart-sauce-labs-backpack")
+            )
         ).click()
 
     def open_cart(self):
-        self.driver.find_element(
-            By.CLASS_NAME,
-            "shopping_cart_link"
+        WebDriverWait(self.driver, 10).until(
+            EC.element_to_be_clickable(
+                (By.CLASS_NAME, "shopping_cart_link")
+            )
         ).click()
